@@ -1,0 +1,528 @@
+nav {
+  background-color: #131921;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  margin-left: 40px;
+  padding: 3px;
+}
+nav .logo img {
+  margin-top: 10px;
+  width: 100px;
+}
+nav .logo:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+
+nav .search {
+  display: flex;
+  position: absolute;
+  left: 18%;
+}
+nav .search .searchbar {
+  width: 600px;
+  padding: 0 10px;
+  height: 40px;
+  border: none;
+  font-size: 18px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+nav .search .searchbar:focus {
+  border: none;
+  outline: none;
+}
+.searchbar:focus {
+  border: 4px solid #f3a847; /* Amazon-like orange */
+  box-shadow: 0 0 0 2px rgba(243, 168, 71, 0.885);
+}
+nav .search .search-icon {
+  width: 55px;
+  height: 40px;
+  background-color: #FEBD69;
+  color: #333;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+nav .search .search-icon:hover {
+  background-color: #F3A847;
+}
+nav .search .search-icon > * {
+  font-size: 37px;
+}
+nav .search-list {
+  position: absolute;
+  left: 18%;
+  top: 50px;
+  z-index: 10;
+  background-color: #fff;
+  width: 655px;
+  outline: 1px solid #ddd;
+  outline-offset: -1px;
+  padding: 0;
+}
+nav .search-list .list-item {
+  padding: 0;
+}
+nav .search-list .list-item a {
+  width: 100%;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333
+}
+nav .search-list .list-item a:hover {
+  background-color: #eee;
+}
+
+nav .buttons {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+nav .buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+nav .buttons a:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+nav .buttons .login {
+  padding: 10px 17px;
+}
+nav .buttons .cart {
+  padding: 10px 17px;
+}
+nav .buttons .cart #cart-icon {
+  font-size: 26px;
+}
+nav .buttons .cart .button-text {
+  margin-left: 10px;
+}
+nav .buttons .profile:hover {
+  outline: none;
+  border-radius: 50%;
+}
+nav .buttons .profile {
+  margin-left: 20px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+nav .buttons .profile #profile-icon {
+  font-size: 24px;
+  color: #fff;
+}
+nav .buttons .profile #profile-letter {
+  font-size: 24px;
+  background-color: #1976D2;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-options h5 {
+  padding: 25px 15px;
+  background-color: #131921;
+  color: #fff;
+}
+.profile-options h5:hover {
+  color: #fff;
+}
+.profile-options > * {
+  text-decoration: none;
+  color: #444;
+}
+.profile-options > *:hover {
+  color: #444
+}
+.profile-options .profile-option {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+}
+.profile-options .profile-option:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.profile-options .profile-option .profile-icon {
+  width: 50px;
+}
+
+@media screen and (max-width: 1300px) {
+  nav .search {
+    left: 15%;
+  }
+  nav .search-list {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  nav .search .searchbar {
+    width: 400px;
+  }
+  nav .search {
+    left: 20%;
+  }
+  nav .search-list {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 992px) {
+  nav .search .searchbar {
+    width: 300px;
+  }
+  nav .search {
+    left: 25%;
+  }
+  nav .search-list {
+    left: 25%;
+  }
+  nav .buttons .login {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  nav .search .searchbar, nav .search .search-icon {
+    display: none;
+  }
+  nav .logo {
+    margin-left: 20px;
+  }
+  nav .logo img {
+    margin-top: 7px;
+    width: 90px;
+  }
+  nav .buttons {
+    margin-right: 10px;
+  }
+  nav .buttons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+  }
+  nav .buttons .login {
+    padding: 5px 10px;
+  }
+  nav .buttons .cart {
+    padding: 5px 10px;
+  }
+  nav .buttons .cart #cart-icon {
+    font-size: 22px;
+  }
+  nav .buttons .profile #profile-icon {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  
+}
+
+.sub-nav {
+  height: 39px;
+  background-color: #232F3E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-nav .left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.sub-nav .left .left-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 3px 10px;
+  margin: 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sub-nav .left .left-item:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+.sub-nav .left .left-item.all {
+  font-weight: 700;
+  margin-left: 10px;
+}
+.sub-nav .left .left-item.all #hamburger {
+  font-size: 22px;
+  margin-right: 2px;
+}
+.sub-nav .right {
+  height: 39px;
+}
+.sub-nav .right .download img {
+  height: 100%;
+}
+.sub-nav .right .download:hover {
+  outline: 1px solid white;
+  outline-offset: -2px;
+  border-radius: 2px;
+}
+@media screen and (max-width: 1320px) {
+  .sub-nav {
+    display: none;
+  }
+}
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  line-height: 1.2;
+}
+
+.nav-address .add-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.nav-address .add-first {
+  font-size: 12px;
+  color: #555;
+}
+.nav-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 12px;
+  line-height: 1.2;
+  margin-left: 10px;
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-address:hover {
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+
+.nav-address .add-first {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.nav-address .add-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.nav-address .add-icon i {
+  font-size: 16px;
+}
+/* Faded black background when search is focused */
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 50;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.drawer-header {
+    background-color: #232f3e; /* This is the dark background for the header area */
+    /* ... other styles for padding, display, align-items */
+}
+/* To bring navbar on top */
+nav {
+  position: relative;
+  z-index: 100;
+}
+
+/* Optional: Highlight border when search focused */
+.searchbar:focus {
+  border: 2px solid orange;
+  outline: none;
+}
+/* General Drawer Container */
+.MuiDrawer-paper {
+    background-color: #ffffff;
+    width: 300px !important; /* Keep your desired width */
+    max-width: 100%;
+    padding: 0; /* Remove any default padding here */
+    overflow-y: auto; /* Keep this for scrolling */
+    font-family: 'Amazon Ember', Arial, sans-serif; /* Use a font similar to Amazon if you have it */
+}
+
+/* Header: Hello, Sign In */
+/* In Navbar.css */
+
+/* ... (rest of your existing CSS) ... */
+
+/* Header: Hello, Sign In */
+.drawer-header {
+    background-color: #232f3e;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    /* Remove color: #ffffff here from .drawer-header itself to simplify,
+       as we'll explicitly set color on children. */
+}
+
+.drawer-header .drawer-link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* Remove color: #fff here. Let MuiListItemText-primary handle the text color
+       and drawer-header-icon handle the icon color. */
+}
+
+.drawer-header .drawer-link .MuiListItemText-primary {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff !important; /* Force white color here as a strong fallback */
+}
+
+.drawer-header-icon {
+    font-size: 24px !important;
+    color: #ffffff !important; /* Force white color for the icon too */
+}
+
+/* ... (rest of your existing CSS) ... */
+
+.drawer-header .drawer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem; /* Adjust font size */
+    font-weight: bold;
+    display: flex; /* To align text and icon within the link */
+    align-items: center;
+    width: 100%; /* Ensure link takes full width */
+}
+
+.drawer-header .MuiListItemText-primary {
+    margin-right: 10px;
+    font-size: 1.1rem; 
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+.drawer-header-icon {
+    font-size: 24px !important; 
+    color: #fff;
+}
+
+/* Section titles (Trending, Shop by Category) */
+.drawer-section-title {
+    padding: 12px 20px 10px; 
+    font-weight: bold;
+    font-size: 1rem; 
+    color: #111;
+    border-bottom: 1px solid #e7e7e7; 
+    margin-top: 15px; 
+    margin-bottom: 0; 
+    background-color: #ffffff; 
+}
+/* Ensure ListItemText inside section title also gets the correct font size */
+.drawer-section-title .MuiListItemText-primary {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+/* Each drawer item (Best Sellers, etc.) */
+.drawer-item {
+    padding: 0; 
+}
+
+.drawer-item .MuiListItemButton-root {
+    padding: 10px 20px; 
+    font-size: 0.95rem; 
+    color: #111;
+    transition: background-color 0.2s ease-in-out;
+}
+.drawer-item .MuiListItemText-primary {
+    font-size: 0.95rem; /* Ensure consistent font size */
+    color: #111;
+}
+.drawer-header .drawer-link {
+    color: #fff; /* This should make the NavLink's direct content white */
+    text-decoration: none;
+    /* ... other styles */
+}
+/* Items with chevron icon */
+.drawer-with-chevron .MuiListItemButton-root {
+    display: flex;
+    justify-content: space-between; /* Space out text and icon */
+    align-items: center;
+}
+
+.drawer-chevron {
+    font-size: 20px !important; /* Adjust chevron icon size */
+    color: #777; /* Softer color for chevron */
+}
+
+/* View All Products button at bottom */
+.drawer-view-all .MuiListItemButton-root {
+    font-weight: normal; /* Normal weight for link text */
+    color: #007185; /* Amazon blue for links */
+    padding: 10px 20px; /* Consistent padding */
+}
+.drawer-view-all .MuiListItemButton-root:hover {
+    font-weight: normal; /* Normal weight for link text */
+    color: #2fa3b7; /* Amazon blue for links */
+}
+.drawer-view-all .MuiListItemButton-root:hover {
+    text-decoration: underline; /* Underline on hover */
+    background-color: #fafafa; /* Consistent hover background */
+}
+
+/* Remaining CSS from your original file */
+/* ... (keep the rest of your Navbar.css as is) ... */
