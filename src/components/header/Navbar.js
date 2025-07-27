@@ -35,7 +35,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     // Base URL for your backend API (ensure this matches your .env)
-    const BASE_BACKEND_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    const BASE_BACKEND_URL = process.env.REACT_APP_API_URL || "https://amazonlite-backend.onrender.com";
 
     // Function to toggle any drawer (left or right)
     const toggleDrawer = (anchor, open) => (event) => {
