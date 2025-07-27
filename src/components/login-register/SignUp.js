@@ -58,7 +58,7 @@ const SignUp = () => {
         number: number.trim(),
         email: email.trim(),
         password: password.trim(),
-        confirmPassword: confirmPassword.trim()
+        //confirmPassword: confirmPassword.trim()
       }, {
         headers: {
           'Content-Type': 'application/json'
