@@ -14,7 +14,7 @@ const Product = () => {
     // Base URL for your backend API.
     // Ensure this matches your backend server's address (e.g., http://localhost:5000)
     // The /api prefix will be added to individual endpoints.
-    const BASE_BACKEND_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    const BASE_BACKEND_URL = process.env.REACT_APP_API_URL || "https://amazonlite-backend.onrender.com";
 
     // ✅ Get Authenticated User Details
     const getUserDetails = async () => {
