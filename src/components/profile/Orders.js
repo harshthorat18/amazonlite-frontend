@@ -9,7 +9,7 @@ import OrderTop from './OrderTop';
 import OrderedProduct from './OrderedProduct';
 import Loader from '../loader/Loader';
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_URL = process.env.REACT_APP_API_URL || "https://amazonlite-backend.onrender.com";
 
 const Orders = () => {
   const [isLoading, setIsLoading] = useState(true);
