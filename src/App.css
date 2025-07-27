@@ -1,10 +1,6 @@
 body {
   background-color: #f8f9fa;
 }
-/* src/index.css or src/App.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Your other global CSS styles below */
 body {
