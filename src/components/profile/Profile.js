@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(function () {
     async function fetchUser() {
       try {
-        const res = await axios.get("http://localhost:5000/api/getAuthUser", {
+        const res = await axios.get("https://amazonlite-backend.onrender.com/api/getAuthUser", {
           withCredentials: true
         });
 
