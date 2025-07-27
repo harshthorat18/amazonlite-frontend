@@ -11,7 +11,7 @@ const Home = () => {
 
   const getProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/products');
+      const res = await axios.get('https://amazonlite-backend.onrender.com/api/products');
       setProducts(res.data);
       setIsLoading(false);
     } catch (err) {
