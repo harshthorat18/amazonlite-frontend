@@ -53,7 +53,7 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/register', {
+      await axios.post('https://amazonlite-backend.onrender.com/api/register', {
         name: name.trim(),
         number: number.trim(),
         email: email.trim(),
