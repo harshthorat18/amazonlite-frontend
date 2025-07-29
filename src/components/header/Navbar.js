@@ -159,23 +159,40 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
-        async function fetchUser() {
-            try {
-                const res = await axios.get(`${BASE_BACKEND_URL}/api/getAuthUser`, { withCredentials: true });
-                const name = res.data.name;
-                const fname = name.split(' ')[0];
-                const fletter = name[0];
-                const totalQty = res.data.cart.reduce((acc, item) => acc + item.qty, 0);
-                setLoginMsg(fname);
-                setCartValue(totalQty);
-                setLoggedIn(true);
-                setProfilePhoto(<div onClick={toggleDrawer('right', true)} className="profile"><div id='profile-letter'>{fletter}</div></div>);
-            } catch (error) {
-                if (error.response?.data?.message !== "No token provided") {
-                    console.error("User fetch error:", error);
-                }
-            }
+       async function fetchUser() {
+    try {
+        const token = localStorage.getItem("token"); // <-- get token from localStorage
+
+        if (!token) {
+            console.warn("No token found");
+            return;
         }
+
+        const res = await axios.get(`${BASE_BACKEND_URL}/api/getAuthUser`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+
+        const name = res.data.name;
+        const fname = name.split(' ')[0];
+        const fletter = name[0];
+        const totalQty = res.data.cart.reduce((acc, item) => acc + item.qty, 0);
+        setLoginMsg(fname);
+        setCartValue(totalQty);
+        setLoggedIn(true);
+        setProfilePhoto(
+            <div onClick={toggleDrawer('right', true)} className="profile">
+                <div id='profile-letter'>{fletter}</div>
+            </div>
+        );
+    } catch (error) {
+        if (error.response?.data?.message !== "No token provided") {
+            console.error("User fetch error:", error);
+        }
+    }
+}
+
 
         async function fetchProducts() {
             try {
