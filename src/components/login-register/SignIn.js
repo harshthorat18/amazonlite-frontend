@@ -39,6 +39,7 @@ const SignIn = () => {
         navigate('/');
       }
     } catch (err) {
+      console.error("Login error:", err.response?.data);
        const msg = err.response?.data?.message;
   if (Array.isArray(msg)) {
     setError(msg); // array of error objects
